@@ -1,18 +1,16 @@
-# Local Terraform directories
+# Terraform binary directories
 .terraform/
+.terraform.lock.hcl
 
-# Terraform state files
-terraform.tfstate
-terraform.tfstate.backup
+# Terraform State Files (contains ALL your secrets - NEVER commit these)
+*.tfstate
+*.tfstate.backup
 
-# Crash log files
+# Crash logs
 crash.log
 
-# Exclude override files from Git
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
+# SSH Keys (Your private key - NEVER commit this)
+aws_deploy_key
 
-# Terraform lock file
-.terraform.lock.hcl
+# System files
+.DS_Store
